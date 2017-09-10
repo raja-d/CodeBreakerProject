@@ -72,13 +72,13 @@ function getResults(input){
 	
 	for(i=0;i<4;i++){
 		
-		if(input.value[i]==answer.value[i]){
+		if(input.value.charAt(i)==answer.value.charAt(i)){
 			str += '<span class="glyphicon glyphicon-ok"></span>';
 		}
 		else{
 			let flag = 0;
 			for(j=0;j<4;j++){
-				if(input.value[i]==answer.value[j]){
+				if(input.value.charAt(i)==answer.value.charAt(j)){
 					flag = 1;
 					break;
 				}
