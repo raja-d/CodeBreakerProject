@@ -22,7 +22,7 @@ function guess() {
     	return false;
     }
 	
-	if(getResults(input)){
+	if(getResults(input.value)){
 		setMessage("You Win! :)");
 		showAnswer(true);
 		showReplay();
@@ -67,18 +67,18 @@ function validateInput(input){
 }
 
 function getResults(input){
-	let str = '<div class="row"><span class="col-md-6">' + input.value + '</span><div class="col-md-6">';
+	let str = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
 	let i,j;
 	
 	for(i=0;i<4;i++){
 		
-		if(input.value.charAt(i)==answer.value.charAt(i)){
+		if(input.charAt(i)==answer.value.charAt(i)){
 			str += '<span class="glyphicon glyphicon-ok"></span>';
 		}
 		else{
 			let flag = 0;
 			for(j=0;j<4;j++){
-				if(input.value.charAt(i)==answer.value.charAt(j)){
+				if(input.charAt(i)==answer.value.charAt(j)){
 					flag = 1;
 					break;
 				}
