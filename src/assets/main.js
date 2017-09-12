@@ -92,7 +92,7 @@ function getResults(input){
 	str += '</div></div>';
 	//alert(str);
 	document.getElementById('results').innerHTML += str;
-	if(input.value == answer.value) return true;
+	if(input == answer.value) return true;
 	else return false;
 }
 
